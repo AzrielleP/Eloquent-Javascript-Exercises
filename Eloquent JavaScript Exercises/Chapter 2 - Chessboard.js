@@ -16,16 +16,10 @@ When you have a program that generates this pattern, define a binding size = 8 a
 */
 
 let size = 8;
-x="";
-for (j=0; j<size; j++){
-  for(i=0; i < size; i++){
-    if((i+j) % 2 == 0){
-      x+="#";
+for (let i =0; i< size; i++) {
+    let y = "";
+    for (let j = 0; j < size; j++) {
+        (i+j)%2 == 0 ? y+="#" : y+=" ";
     }
-    else{
-      x+=" ";
-    }
-  }
-  x+="\n";
+    console.log(y)
 }
-console.log(x);
